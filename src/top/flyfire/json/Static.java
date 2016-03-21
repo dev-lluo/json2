@@ -1,7 +1,8 @@
 package top.flyfire.json;
 
-import top.flyfire.json.container.JsonString;
-import top.flyfire.json.type.JsonBean;
+import top.flyfire.json.base.JsonString;
+import top.flyfire.json.base.JsonBean;
+import top.flyfire.json.linked.adapter.JsonAdapter;
 
 /**
  * Created by flyfire[dev.lluo@outlook.com] on 2016/3/15.
