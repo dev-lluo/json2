@@ -1,0 +1,28 @@
+JsonResolver
+
+-->initBehavior(){
+
+}
+
+-->resolve(json){
+
+}
+
+-->StructBehavior{
+        -->EmptyBehavior
+   }
+-->ResolveBehavior{
+        -->ObjectBehavior{
+            -->PropertyBehavior
+            -->ValueBehavior
+            -->NextBehavior
+        }
+        -->ArrayBehavior{
+            -->ValueBehavior
+            -->NextBehavior
+        }
+   }
+
+
+
+
