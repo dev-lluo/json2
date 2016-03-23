@@ -1,7 +1,5 @@
 package top.flyfire.json;
 
-import top.flyfire.json.base.JsonString;
-import top.flyfire.json.base.JsonBean;
 import top.flyfire.json.linked.adapter.JsonAdapter;
 
 /**
@@ -10,7 +8,7 @@ import top.flyfire.json.linked.adapter.JsonAdapter;
 public interface Static {
 
     static JsonBean json2Java (String json){
-        return null;
+        return new JsonAdapter(new JsonString(json)).run().result();
     }
 
     static JsonString java2Json(String json){

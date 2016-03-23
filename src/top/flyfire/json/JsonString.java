@@ -1,4 +1,4 @@
-package top.flyfire.json.base;
+package top.flyfire.json;
 
 /**
  * Created by flyfire[dev.lluo@outlook.com] on 2016/3/15.
@@ -14,6 +14,8 @@ public class JsonString implements CharSequence {
     private char[] container;
 
     private int length;
+
+    private int hashCode;
 
     public JsonString() {
         this.container = new char[DEFAULT_CAP];
@@ -54,6 +56,12 @@ public class JsonString implements CharSequence {
         return new JsonString(value);
     }
 
+    public char[] realVal(){
+        char[] realVal = new char[this.length];
+        System.arraycopy(this.container, 0, realVal, 0, this.length);
+        return  realVal;
+    }
+
 
     public void append(char[] value){
        this.append(value, value.length);
@@ -61,6 +69,20 @@ public class JsonString implements CharSequence {
 
     public void append(JsonString jsonString){
         this.append(jsonString.container,jsonString.length());
+    }
+
+    @Override
+    public int hashCode(){
+        int h = hashCode;
+        if(h==0&&!this.isEmpty()){
+            char val[] = this.container;
+
+            for (int i = 0; i < this.length; i++) {
+                h = 31 * h + val[i];
+            }
+            hashCode = h;
+        }
+        return h;
     }
 
     private void append(char[] value,int expectLength){

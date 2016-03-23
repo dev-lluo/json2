@@ -1,6 +1,4 @@
-package top.flyfire.json.base;
-
-import top.flyfire.json.base.JsonBean;
+package top.flyfire.json;
 
 /**
  * Created by flyfire[dev.lluo@outlook.com] on 2016/3/15.

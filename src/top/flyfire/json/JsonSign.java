@@ -1,4 +1,4 @@
-package top.flyfire.json.base;
+package top.flyfire.json;
 
 /**
  * Created by h on 2016/3/8.
@@ -48,4 +48,11 @@ public interface JsonSign {
     static boolean isComma(char sign){
         return COMMA == sign;
     }
+
+    char SPACE = ' ';
+    static boolean isSpace(char sign){
+        return SPACE == sign;
+    }
+
+    String NULL = "null";
 }

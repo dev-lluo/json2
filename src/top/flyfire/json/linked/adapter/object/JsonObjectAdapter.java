@@ -1,6 +1,6 @@
 package top.flyfire.json.linked.adapter.object;
 
-import top.flyfire.json.base.JsonString;
+import top.flyfire.json.JsonString;
 
 /**
  * Created by flyfire[dev.lluo@outlook.com] on 2016/3/15.
